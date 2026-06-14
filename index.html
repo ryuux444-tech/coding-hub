@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learn Coding – Swift & Python Courses</title>
+    <title>Learn Coding – Swift · Python · Web · SQL</title>
     <style>
         * {
             margin: 0;
@@ -60,9 +60,9 @@
 
         .cards-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 32px;
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
         }
 
@@ -91,7 +91,7 @@
         }
 
         .card h2 {
-            font-size: 32px;
+            font-size: 28px;
             font-weight: 700;
             margin-bottom: 12px;
         }
@@ -110,10 +110,24 @@
             color: transparent;
         }
 
+        .web-card h2 {
+            background: linear-gradient(135deg, #60a5fa, #8b5cf6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .sql-card h2 {
+            background: linear-gradient(135deg, #fbbf24, #10b981);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
         .card p {
             color: #94a3b8;
             margin-bottom: 24px;
-            font-size: 16px;
+            font-size: 14px;
         }
 
         .card-stats {
@@ -158,6 +172,28 @@
         }
 
         .python-card:hover .python-btn {
+            background: #10b981;
+            color: #0f172a;
+        }
+
+        .web-btn {
+            background: rgba(96, 165, 250, 0.2);
+            color: #60a5fa;
+            border: 1px solid rgba(96, 165, 250, 0.3);
+        }
+
+        .web-card:hover .web-btn {
+            background: #60a5fa;
+            color: #0f172a;
+        }
+
+        .sql-btn {
+            background: rgba(16, 185, 129, 0.2);
+            color: #10b981;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        .sql-card:hover .sql-btn {
             background: #10b981;
             color: #0f172a;
         }
@@ -268,28 +304,52 @@
                     </div>
                     <div class="btn-card python-btn">📖 Learn Python →</div>
                 </a>
+
+                <!-- Web Card (Coming Soon / Later) -->
+                <a href="#" class="card web-card" style="opacity: 0.7; cursor: not-allowed;" onclick="return false;">
+                    <div class="card-icon">🌐</div>
+                    <h2>REDEFINE WEB</h2>
+                    <p>A complete beginner's guide to HTML, CSS, and JavaScript — from structure to interactivity.</p>
+                    <div class="card-stats">
+                        <span>📄 300+ pages</span>
+                        <span>📚 6 parts</span>
+                        <span>📖 49 chapters</span>
+                    </div>
+                    <div class="btn-card web-btn">⏳ Coming Soon</div>
+                </a>
+
+                <!-- SQL Card -->
+                <a href="https://ryuux444-tech.github.io/sql-book/" class="card sql-card">
+                    <div class="card-icon">🗄️</div>
+                    <h2>SQL WAY</h2>
+                    <p>A complete beginner's guide to databases — query data, design schemas, and connect with Python.</p>
+                    <div class="card-stats">
+                        <span>📄 250+ pages</span>
+                        <span>📚 8 parts</span>
+                        <span>📖 34 chapters</span>
+                    </div>
+                    <div class="btn-card sql-btn">📖 Learn SQL →</div>
+                </a>
             </div>
         </div>
 
         <div class="coming-soon">
             <h3>🚀 More languages coming soon...</h3>
             <div class="languages-grid">
-                <span class="lang-tag">JavaScript</span>
                 <span class="lang-tag">TypeScript</span>
-                <span class="lang-tag">Java</span>
+                <span class="lang-tag">React</span>
+                <span class="lang-tag">Node.js</span>
                 <span class="lang-tag">Go</span>
                 <span class="lang-tag">Rust</span>
-                <span class="lang-tag">C++</span>
+                <span class="lang-tag">Java</span>
                 <span class="lang-tag">C#</span>
-                <span class="lang-tag">Ruby</span>
-                <span class="lang-tag">Kotlin</span>
-                <span class="lang-tag">HTML/CSS</span>
+                <span class="lang-tag">C++</span>
             </div>
         </div>
 
         <div class="footer">
             <p>© 2026 RYUU · Learn Coding</p>
-            <p style="margin-top: 8px;">📘 <a href="https://ryuux444-tech.github.io/swift-book/">Swift Book</a> · 🐍 <a href="https://ryuux444-tech.github.io/python-book/">Python Book</a></p>
+            <p style="margin-top: 8px;">📘 <a href="https://ryuux444-tech.github.io/swift-book/">Swift</a> · 🐍 <a href="https://ryuux444-tech.github.io/python-book/">Python</a> · 🗄️ <a href="https://ryuux444-tech.github.io/sql-book/">SQL</a> · 🌐 <a href="#">Web (Soon)</a></p>
         </div>
     </div>
 </body>
