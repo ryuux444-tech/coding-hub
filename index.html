@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Coding – Swift & Python Courses</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+            color: #e2e8f0;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 80px 0 60px;
+        }
+
+        .logo {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 56px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #60a5fa, #fbbf24, #10b981);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 16px;
+        }
+
+        .tagline {
+            font-size: 20px;
+            color: #94a3b8;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Cards Section */
+        .cards-section {
+            padding: 40px 0 80px;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 32px;
+            padding: 40px 32px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            background: rgba(255,255,255,0.1);
+            border-color: rgba(255,255,255,0.2);
+        }
+
+        .card-icon {
+            font-size: 64px;
+            margin-bottom: 24px;
+        }
+
+        .card h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .swift-card h2 {
+            background: linear-gradient(135deg, #fbbf24, #f97316);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .python-card h2 {
+            background: linear-gradient(135deg, #10b981, #06b6d4);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .card p {
+            color: #94a3b8;
+            margin-bottom: 24px;
+            font-size: 16px;
+        }
+
+        .card-stats {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 24px;
+            font-size: 13px;
+            color: #64748b;
+        }
+
+        .card-stats span {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-card {
+            display: inline-block;
+            padding: 10px 28px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .swift-btn {
+            background: rgba(251, 191, 36, 0.2);
+            color: #fbbf24;
+            border: 1px solid rgba(251, 191, 36, 0.3);
+        }
+
+        .swift-card:hover .swift-btn {
+            background: #fbbf24;
+            color: #0f172a;
+        }
+
+        .python-btn {
+            background: rgba(16, 185, 129, 0.2);
+            color: #10b981;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        .python-card:hover .python-btn {
+            background: #10b981;
+            color: #0f172a;
+        }
+
+        /* Coming Soon Section */
+        .coming-soon {
+            text-align: center;
+            padding: 60px 0 80px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .coming-soon h3 {
+            font-size: 24px;
+            color: #94a3b8;
+            margin-bottom: 32px;
+            font-weight: 500;
+        }
+
+        .languages-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+        }
+
+        .lang-tag {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 10px 24px;
+            border-radius: 40px;
+            font-size: 16px;
+            color: #64748b;
+            transition: all 0.3s ease;
+        }
+
+        .lang-tag:hover {
+            border-color: #fbbf24;
+            color: #fbbf24;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            color: #475569;
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: #64748b;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: #10b981;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 36px;
+            }
+            .tagline {
+                font-size: 16px;
+            }
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+            .card {
+                padding: 32px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">💻✨</div>
+            <h1>LEARN CODING</h1>
+            <div class="tagline">Free, beginner-friendly programming books. Start your coding journey today.</div>
+        </div>
+
+        <div class="cards-section">
+            <div class="cards-grid">
+                <!-- Swift Card -->
+                <a href="https://ryuux444-tech.github.io/swift-book/" class="card swift-card">
+                    <div class="card-icon">📱</div>
+                    <h2>GO SWIFT WITH THE FLOW</h2>
+                    <p>A complete beginner's guide to Swift — from variables to memory management. Build iOS apps like a pro.</p>
+                    <div class="card-stats">
+                        <span>📄 1000+ pages</span>
+                        <span>📚 22 parts</span>
+                        <span>📖 137+ chapters</span>
+                    </div>
+                    <div class="btn-card swift-btn">📖 Learn Swift →</div>
+                </a>
+
+                <!-- Python Card -->
+                <a href="https://ryuux444-tech.github.io/python-book/" class="card python-card">
+                    <div class="card-icon">🐍</div>
+                    <h2>NEXT WAY TO PYTHON</h2>
+                    <p>A complete beginner's guide to Python — from basics to full-stack web development.</p>
+                    <div class="card-stats">
+                        <span>📄 500+ pages</span>
+                        <span>📚 22 parts</span>
+                        <span>📖 100+ chapters</span>
+                    </div>
+                    <div class="btn-card python-btn">📖 Learn Python →</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="coming-soon">
+            <h3>🚀 More languages coming soon...</h3>
+            <div class="languages-grid">
+                <span class="lang-tag">JavaScript</span>
+                <span class="lang-tag">TypeScript</span>
+                <span class="lang-tag">Java</span>
+                <span class="lang-tag">Go</span>
+                <span class="lang-tag">Rust</span>
+                <span class="lang-tag">C++</span>
+                <span class="lang-tag">C#</span>
+                <span class="lang-tag">Ruby</span>
+                <span class="lang-tag">Kotlin</span>
+                <span class="lang-tag">HTML/CSS</span>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>© 2026 RYUU · Learn Coding</p>
+            <p style="margin-top: 8px;">📘 <a href="https://ryuux444-tech.github.io/swift-book/">Swift Book</a> · 🐍 <a href="https://ryuux444-tech.github.io/python-book/">Python Book</a></p>
+        </div>
+    </div>
+</body>
+</html>
